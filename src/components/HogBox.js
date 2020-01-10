@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import HogTile from './HogTile'
 
-const HogBox = () => {
+const HogBox = (props) => {
   return (
     <div className="HogBox">
         <h2>HogBox</h2>
-        < HogTile />
+        {props.refinedHogs.map(hog => < HogTile hog={hog} onHogHide={props.onHogHide}/>)}
     </div>
   )
 }

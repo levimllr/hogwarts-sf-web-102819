@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import HogTile from './HogTile';
 
 class HiddenHogBox extends Component {
   constructor(props) {
@@ -11,7 +12,8 @@ class HiddenHogBox extends Component {
   render() {
     return (
       <div className="HiddenHogBox">
-          <h3>HiddenHogBox</h3>
+        <h2>HiddenHogBox</h2>
+        {this.props.refinedHogs.map(hog => <HogTile hog={hog} onHogHide={() => console.log("You can't hide...")} />)}
       </div>
     )
   }
